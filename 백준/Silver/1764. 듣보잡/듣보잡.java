@@ -1,10 +1,9 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Main{
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
@@ -28,14 +27,9 @@ public class Main {
         }
 
         Collections.sort(noHeardAndSaw); // 사전순 정렬
-        bw.write(noHeardAndSaw.size() + "\n");
-
+        System.out.println(noHeardAndSaw.size());
         for(String s: noHeardAndSaw){
-            bw.write(s + "\n");
+            System.out.println(s);
         }
-
-        br.close();
-        bw.flush();
-        bw.close();
     }
 }
