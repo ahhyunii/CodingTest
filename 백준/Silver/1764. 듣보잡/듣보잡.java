@@ -4,10 +4,10 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        
-        String[] strings = br.readLine().split(" ");
-        int N = Integer.parseInt(strings[0]);
-        int M = Integer.parseInt(strings[1]);
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
 
         Set<String> noHeard = new HashSet<>();
         List<String> noHeardAndSaw = new ArrayList<>();
@@ -28,11 +28,11 @@ public class Main {
 
         Collections.sort(noHeardAndSaw); // 사전순 정렬
         System.out.println(noHeardAndSaw.size());
-
+        
         for(String s: noHeardAndSaw){
             System.out.println(s);
         }
-
+        
         br.close();
     }
 }
