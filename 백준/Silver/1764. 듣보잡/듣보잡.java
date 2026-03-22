@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main{
+public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -28,8 +28,11 @@ public class Main{
 
         Collections.sort(noHeardAndSaw); // 사전순 정렬
         System.out.println(noHeardAndSaw.size());
+        
         for(String s: noHeardAndSaw){
             System.out.println(s);
         }
+        
+        br.close();
     }
 }
