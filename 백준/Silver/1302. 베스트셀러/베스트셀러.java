@@ -28,5 +28,7 @@ public class Main {
         // 사전순 첫번째값 출력
         Collections.sort(maxSaleBook);
         System.out.println(maxSaleBook.get(0));
+
+        br.close();
     }
 }
