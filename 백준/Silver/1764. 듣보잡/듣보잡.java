@@ -2,6 +2,19 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
+    /*
+     문제 요약
+      - 듣도 못한 N명, 보도 못한 M명에서 듣도 보도 못한 명단 출력
+      - 결과는 사전순 출력
+      - 이름은 띄어쓰기 없이 알파벳 소문자
+
+     핵심 아이디어
+      - HashSet과 ArrayList 함께 사용
+      - Set에는 듣지 못한 사람, List에는 Set에 있고 & 보지 못한 사람만 저장
+      - 마지막에 리스트 정렬해 출력
+
+     시간 복잡도: O(N + M + k log k) (k: 듣도 보도 못한 사람 수)
+    */
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -28,11 +41,11 @@ public class Main {
 
         Collections.sort(noHeardAndSaw); // 사전순 정렬
         System.out.println(noHeardAndSaw.size());
-        
+
         for(String s: noHeardAndSaw){
             System.out.println(s);
         }
-        
+
         br.close();
     }
 }
