@@ -6,17 +6,17 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
 
-        Queue<Integer> q = new ArrayDeque<>();
+        Deque<Integer> q = new ArrayDeque<>();
 
         for(int i = 0; i < N; i++) {
-            q.offer(i + 1); // deque 뒤에 추가
+            q.addLast(i + 1);
         }
 
         while(q.size() > 1){
-             q.poll(); // 앞에서 삭제
-             q.offer(q.poll());
+             q.removeFirst();
+             q.addLast(q.removeFirst());
         }
 
-        System.out.println(q.poll());
+        System.out.println(q.getFirst());
     }
 }
