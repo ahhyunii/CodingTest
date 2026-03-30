@@ -6,17 +6,11 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
 
-        Deque<Integer> q = new ArrayDeque<>();
+        int x = Integer.highestOneBit(N);
 
-        for(int i = 0; i < N; i++) {
-            q.addLast(i + 1);
-        }
-
-        while(q.size() > 1){
-             q.removeFirst();
-             q.addLast(q.removeFirst());
-        }
-
-        System.out.println(q.getFirst());
+        // N == 2의 거듭제곱
+        if(N == x) System.out.println(N);
+        // 대입식: 2 x ( N - N보다 작은 & 가장 큰 2의 제곱)
+        else System.out.println(2 * (N - x));
     }
 }
