@@ -1,0 +1,7 @@
+-- 코드를 작성해주세요
+select c.id
+from ecoli_data a
+inner join ecoli_data b on a.id = b.parent_id
+inner join ecoli_data c on b.id = c.parent_id
+where a.parent_id is null
+order by c.id;
